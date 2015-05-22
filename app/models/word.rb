@@ -9,10 +9,13 @@ class Word
     end
 
     def self.move_words(word, array)
-        word = word[1] + word[2] + word[0]
-        array.push(word)
-        word = word[1] + word[2] + word[0]
-        array.push(word)
+        rotations = 0
+        while rotations < 2
+            word = word.split("").rotate
+            word = word.join("")
+            array.push(word)
+            rotations = rotations + 1
+        end
         return word, array
     end
 
@@ -21,12 +24,11 @@ class Word
             anagrams = []
             new_word = word
             anagrams.push(new_word)
-            new_word, anagrams = self.move_words(new_word, anagrams)
-            reversed_word = self.reverse_letters(new_word)
+            new_word, anagrams = move_words(new_word, anagrams)
+            reversed_word = reverse_letters(new_word)
             anagrams.push(reversed_word)
-            new_word, anagrams = self.move_words(reversed_word, anagrams)
+            new_word, anagrams = move_words(reversed_word, anagrams)
         end
         return anagrams
     end
-
 end
