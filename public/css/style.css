@@ -7,21 +7,38 @@ body {
 }
 .title {
     text-align: center;
+    font-size: 100px;
 } 
 form {
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 input {
     margin-top: 20px;
     border-radius: 5px;
+    font-size: 50px;
 }
 .box {
-    padding: 5px;
     border: 2px #DE1B69 solid;
     margin-top: 40px;
+    padding-top: 10px;
+    font-size: 30px;
 }
 .btn {
     font-size: 20px;
-    color: #DE1B69;
+    color: white;
+    background: #DE1B59;
+    padding: 10px 150px 10px 150px;
+    text-align: center;
+}
+li {
+    font-size: 50px;
+    padding-top: 50px;
+    text-align: center;
+    list-style-type: none;
+}
+p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }

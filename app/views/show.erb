@@ -1,6 +1,6 @@
 <h1 class="title">Anagrams for <%= "#{@word}" %></h1>
 <ul>
     <% @anagrams.each do |anagram| %>
-        <li><%= anagram %></li>
+        <li><%= anagram.upcase %></li>
     <% end %>
 </ul>  
