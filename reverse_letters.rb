@@ -1,24 +1,8 @@
 def reverse_letters(word)
-    if word.length == 2
-        anagrams = []
-        (-1..0).each do |index|
-            anagrams.push(word[index])
-        end
-        return anagrams
+    reversed_word = ''
+    length = word.length - 1
+    length.downto(0).each do |index|
+        reversed_word = reversed_word + word[index]
     end
-
-    if word.length == 3
-        anagrams = []
-        new_word = ''
-        original_word = word
-        while new_word != original_word
-            new_word = word
-            anagrams.push(new_word)
-            new_word = word[0] + word[2] + word[1]
-            anagrams.push(new_word)
-            word = word[1] + word[2] + word[0]
-        end
-    end
+    return reversed_word
 end
-
-puts reverse_letters("dog")
