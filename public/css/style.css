@@ -1,0 +1,27 @@
+body {
+	background:#f8f8f8;
+	background:url('/images/tiles-02.png');
+	font-family:'montserrat', arial;
+    font-size: 25px;
+    color: #DE1B69;
+}
+.title {
+    text-align: center;
+} 
+form {
+    padding-top: 100px;
+    text-align: center;
+}
+input {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.box {
+    padding: 5px;
+    border: 2px #DE1B69 solid;
+    margin-top: 40px;
+}
+.btn {
+    font-size: 20px;
+    color: #DE1B69;
+}
