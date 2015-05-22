@@ -20,7 +20,3 @@ def move_words(word, array)
     array.push(word)
     return word, array
 end
-
-find_anagram("dog")
-
-
