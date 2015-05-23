@@ -1,4 +1,5 @@
-class Word
+class Word < ActiveRecord::Base
+
     def self.reverse_letters(word)
         reversed_word = ''
         length = word.length - 1
