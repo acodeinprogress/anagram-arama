@@ -14,7 +14,9 @@ class Word < ActiveRecord::Base
         while rotations < 2
             word = word.split("").rotate
             word = word.join("")
-            array.push(word)
+            if Word.find_by_text(word).present?
+                array.push(word)
+            end
             rotations = rotations + 1
         end
         return word, array
@@ -24,10 +26,14 @@ class Word < ActiveRecord::Base
         if word.length == 3
             anagrams = []
             new_word = word
-            anagrams.push(new_word)
+            if Word.find_by_text(word).present?
+                anagrams.push(new_word)
+            end
             new_word, anagrams = move_words(new_word, anagrams)
             reversed_word = reverse_letters(new_word)
-            anagrams.push(reversed_word)
+            if Word.find_by_text(reversed_word).present?
+                anagrams.push(reversed_word)
+            end
             new_word, anagrams = move_words(reversed_word, anagrams)
         end
         return anagrams
