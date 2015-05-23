@@ -1,13 +1,5 @@
 require 'sinatra' 
 
-def three_letters?(word)
-    if params[:word].length > 3 || params[:word].length < 2
-        false
-    else
-        true
-    end
-end
-
 def distinct_letters?(input)
     letter_array = input.chars
     unique_letters = input.split("").uniq
