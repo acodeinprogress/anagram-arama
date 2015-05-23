@@ -5,11 +5,11 @@ describe 'Our Anagrams App' do
   
   it 'does not include combinations which are not words when posting to /' do
     post("/", { word: 'cat' })
-    expect(last_response.body).not_to include("cta", "atc", "tca", "tac")
+    expect(last_response.body).not_to include("CTA", "ATC", "TCA", "TAC")
   end
   
   it 'does not include combinations which are not words following a get request to /anagrams/:word' do
     get("/anagrams/cat")
-    expect(last_response.body).not_to include("cta", "atc", "tca", "tac")
+    expect(last_response.body).not_to include("CTA", "ATC", "TCA", "TAC")
   end  
 end
