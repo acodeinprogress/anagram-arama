@@ -1,4 +1,3 @@
-require './index_controller'
 require 'sinatra/base'
 require 'sinatra'
 require 'rake'
