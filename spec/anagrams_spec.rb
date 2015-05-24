@@ -2,8 +2,7 @@ require 'spec_helper'
 
 describe 'Our Anagrams App' do
   include SpecHelper
-  
-  it 'responds with a redirect on a post to /' do
+ it 'responds with a redirect on a post to /' do
     post("/", { word: 'cat' })
     expect(last_response.redirect?).to be(true)
   end
@@ -39,5 +38,10 @@ describe 'Our Anagrams App' do
   it 'has letters of a word in alphabetical order' do
     word = Word.find_by_text("cat")
     expect(word.letters == "act").to be(true)
+  end  
+  
+  it 'adds letters before a new word is created' do
+    word = Word.create(text: "heroku")
+    expect(word.reload.letters == "ehkoru").to be(true)
   end  
 end
