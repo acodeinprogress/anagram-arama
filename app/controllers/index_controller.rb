@@ -11,7 +11,7 @@ def distinct_letters?(input)
 end
 
 def valid_input?(input)
-    if input.length > 3 || input.length < 2
+    if input.length < 2
         raise Exception.new("Word must be between 2 to 3 characters.")
     end
 end
