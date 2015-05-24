@@ -22,8 +22,7 @@ end
 
 get '/anagrams/:word' do
     @word = params[:word]
-    alphabetized_string = @word.chars.sort.join
-    @anagrams = Word.where("letters=?", alphabetized_string)
+    @anagrams = Word.find_anagram(@word)
     erb :show
 end
 
