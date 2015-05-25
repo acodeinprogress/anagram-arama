@@ -20,8 +20,8 @@ get '/' do
     erb :index
 end
 
-get '/anagrams/:word' do
-    @word = params[:word]
+get '/anagrams/:text' do
+    @word = params[:text]
     @anagrams = Word.find_anagram(@word)
     erb :show
 end
