@@ -6,6 +6,9 @@ body {
     font-size: 25px;
     color: #DE1B69;
 }
+a {
+    color: #DE1B69;
+}
 .title {
     text-align: center;
     font-size: 50px;
