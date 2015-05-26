@@ -4,6 +4,7 @@ get '/words' do
 end
 
 get '/words/new' do
+    @word = Word.new
     erb :"/words/new"
 end
 

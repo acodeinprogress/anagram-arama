@@ -1,0 +1,17 @@
+<form method="post" action="<%= words_form_action(@word) %>"
+    class="<%= words_form_class(@word) %>" 
+    id="<%= words_form_id(@word) %>">
+
+    <input type="hidden" name="_method" 
+        value="<%= words_form_method(@word) %>" />
+
+    <div class="field">
+        <label for="text">Word:</label>
+        <input type="text" name="text" />
+    </div>
+
+    <div class="field">
+        <input class="btn btn-primary" type="submit" 
+            value="Add Word to Dictionary" />
+    </div>
+</form>
