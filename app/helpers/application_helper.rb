@@ -3,7 +3,7 @@ module ApplicationHelper
         if word.new_record?
             @action = "/words"
         else
-            @action = "/words/edit"
+            @action = "/words/#{word.id}"
         end
         @action
     end
